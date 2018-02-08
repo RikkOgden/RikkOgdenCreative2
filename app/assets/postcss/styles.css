@@ -5,4 +5,8 @@
 @import "modules/_icons";
 @import "modules/_site-header";
 @import "modules/_site-nav";
+@import "modules/_hero";
+@import "modules/_headings";
+@import "modules/_hr";
 @import "modules/_site-footer";
+@import "modules/_animations";

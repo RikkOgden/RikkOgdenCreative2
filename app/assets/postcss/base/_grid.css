@@ -80,7 +80,7 @@ padding:0 25px;
   @mixin clearfix;
 
   &--nostack {
-    min-height:1px;
+  min-height: 1px;
     &__1 {width: 8.333%;}
     &__2 {width: 16.66%;}
     &__3 {width: 25%;}
@@ -112,7 +112,7 @@ padding:0 25px;
 }
 
   @mixin atMedium {
-
+min-height: 1px;
   &--md__1 {width: 8.333%;}
   &--md__2 {width: 16.66%;}
   &--md__3 {width: 25%;}

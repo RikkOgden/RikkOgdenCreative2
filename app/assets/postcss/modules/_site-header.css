@@ -6,20 +6,27 @@
   z-index: 10;
   transition: background-color 0.3s ease-out;
 
-  &__logo-wrapper {
-    text-indent: -9999px;
+  @mixin atMedium {
+  position: fixed;
+  height: 60px;
+  z-index: 5;
+  }
 
-      & h1 {padding: 0;
-      margin: 0;
-      }
-    }
+  &__hide {
+    z-index: 1;
+  }
+
+  &__logo-graphic {
+    width:230px;
+    height: 67px;
+  }
+
+
 
   &__logo {
     background-color: var(--color2);
     position: absolute;
-    width:250px;
-    height: 87px;
-    padding: 10px;
+    padding: 15px;
     left:50%;
     transform-origin: 50% 0;
     transform: translate3d(-50%, 0, 0) scale3d(0.7, 0.7, 0.7);
@@ -27,6 +34,9 @@
     z-index: 8;
     border-radius: 0 0 8px 8px;
     border: 1px solid color(var(--color2) shade(25%) alpha(1));
+    width:260px;
+    height: 97px;
+
 
     &--transparent {
         @mixin maxMedium {
@@ -42,7 +52,8 @@
         transform: scale3d(1, 1, 1);
 
       }
-} /*end logo */
+}
+
 
 @mixin atMedium {
 &--is-scrolling {
@@ -50,7 +61,8 @@ background-color: color(var(--color2) alpha(0.95));
 .site-header__logo {
 background-color: color(var(--color2) alpha(0));
 border-radius: 0 0 0 0;
-transform: scale3d(.6, .6, .6);
+transform: scale3d(.62, .62, .62);
+
 }
 & .site-header__logo {
 background:  color(var(--color2) shade(25%) alpha(1));

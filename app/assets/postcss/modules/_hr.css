@@ -1,0 +1,22 @@
+
+
+.hr {
+  display: block;
+  height: 1px;
+  background-color: #fff;
+  border: none;
+  max-width: 50%;
+  margin: 15px auto;
+
+
+  &--white-grad {
+    background: rgba (255,255,255,0);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%);
+  }
+
+  &--dark-grad {
+    background: var(--color2--light-2-alpha-1);
+    background: linear-gradient(to right, var(--color2--light-2-alpha-0) 0%, var(--color2--light-2-alpha-1) 30%, var(--color2--light-2-alpha-1) 70%, var(--color2--light-2-alpha-0) 100%);
+  }
+
+}
