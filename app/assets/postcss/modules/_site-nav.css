@@ -1,3 +1,84 @@
 .site-nav {
+position:absolute;
+width:100%;
+transform-origin: top;
+transform: translate3d(0, -100%, 0);
+background-color: color(var(--color2)  alpha(.9));
+z-index: 2;
+padding: 70px 18px 18px 18px;
+text-align: center;
+opacity: 0;
+
+@mixin maxMedium {
+transition: 0.3s;
+}
+
+&--is-visible {
+@mixin maxMedium {
+transform: translate3d(0, 0, 0);
+box-shadow: 0 6px 6px 0 color(var(--color2)  alpha(.5));
+opacity: 1;
+}
+}
+& a{
+display: inline-block;
+padding: 8px 8px;
+color: #fff;
+font-weight: 300;
+text-decoration: none;
+text-transform: uppercase;
+font-size: .9rem;
+line-height: 1;
+
+@mixin atMedium {
+letter-spacing: 2px;
+font-size: 1rem;
+background-color:transparent;
+border-radius:0px;
+margin: 0;
+opacity: 0.75;
+transition: opacity .15s linear;
+box-shadow: none;
+}
+
+&--is-current-link {
+color: #000;
+}
+
+&:hover {
+opacity: 1;
+}
+
+@mixin atMedium {
+&::after {
+display:block;
+height: 1px;
+background: #fff;
+content: "";
+margin-top:5px;
+transition: height .15s linear;
+}
+&:hover::after {
+height: 5px;
+}
+}
+@mixin atMedium {
+padding: 15px 15px;
+}
+}
+
+@mixin atMedium {
+position: relative;
+text-align: right;
+width:100%;
+color:#fff;
+padding:  0;
+background-color: transparent;
+transform: translateX(0);
+opacity: 1;
+& a{
+display: inline-block;
+}
+}
 
 }
