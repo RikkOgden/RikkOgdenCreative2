@@ -5,14 +5,10 @@
 /*globals*/
 svg {vertical-align: middle;}
 /*site-header*/
-.site-header {
-width:800px;
+.site-header__logo {width:210px; height: 60px;}
+.site-nav {
 
 }
-.site-header--white {
-  background-color:#fff;
-}
-@media (min-width: 769px) {
-.site-header {width:1200px;
-}
+.site-footer {
+
 }

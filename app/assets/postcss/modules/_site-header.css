@@ -1,4 +1,7 @@
 /*site-header*/
 .site-header {
 
+
+  &__logo {width:210px; height: 60px;}
+
 }
