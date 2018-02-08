@@ -1,2 +1,10 @@
 svg {vertical-align: middle;}
-.icon {fill:blue;}
+.icon {
+  width:32px; height:32px;
+
+  &--boxed {
+    width:37px; height:37px;
+    padding: 5px;
+    background: #fff;
+  }
+}

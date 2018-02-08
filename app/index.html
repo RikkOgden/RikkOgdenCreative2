@@ -26,15 +26,17 @@
 <header role="banner" class="site-header">
   <div class="grid">
     <div class="row">
-      <div class="col col--md__6">
+      <div class="col col--md__4 pos-rel">
+
         <div class="site-header__logo">
           <a href="#page-top" role="button" title="scroll to top">
           <svg class="site-header__logo-graphic icon"><use xlink:href="#roc-logo"></use></svg>
           </a>
         </div>
+
       </div>
 
-      <div class="col col--md__6">
+      <div class="col col--md__8">
         <nav role="navigation" class="site-nav">
           <a href="#services" title="Services" role="button">Services</a><a href="#about-me" title="About me" role="button">About</a><a href="#toolset" title="My toolset" role="button">Toolset</a><a href="#contact" title="Get in touch" role="button">Contact</a>
         </nav>
@@ -46,6 +48,7 @@
     </div>
   </div>
 </header>
+
   <!--hero-->
   <div class="hero">
     <img src="assets/images/cellphone.jpg" class="hero__image hero__image--scale-pan" alt="hero image">
@@ -60,84 +63,125 @@
   <!--/hero-->
 <main role="main">
 
-  <article id="services" class="grid">
-    <h2>Creative Services</h2>
+  <article id="services">
+    <div class="page-section page-section--mgn-v-offset">
+    <div class="grid">
+    <h2 class="text-offset">Creative Services</h2>
   <!--Categories-->
 
     <div class="row row--gutters-lg">
       <div class="col col--md__6">
-        <h3>Websites</h3>
-        <h4>Responsive &amp; Mobile-first</h4>
-        <p>I can design and build website frontends with a mobile-first approach with well structured semantic html5, css3 and javascript.</p>
+        <div class="ad ad--shadow ad--hover-animation feature-item">
+          <div class="ad__image-wrapper">
+            <div class="ad__image ad__image--websites"></div>
+              <div class="ad__image-content ad__image-text heading-group heading-group--white heading-group--md">
+                <h3 class="headline headline--white headline--uppercase headline--sm">Websites</h3>
+                <hr class="hr hr--white-grad">
+                <h4 class="headline headline--white headline--xsm headline--light">Responsive &amp; Mobile-first</h4>
+                  <p class="hide-md"><a class="button button--brand-1  button--open-websites">Find Out More <i class="ficon ficon-chevron-right" aria-hidden="true"></i></a></p>
+              </div>
+          </div>
+          <div class="ad__content hide-sm">
+            <p>I design and build website frontends with a mobile-first approach with well structured semantic html5, css3 and javascript.</p>
+              <hr class="hr hr--dark">
+            <p class="ad__button-wrapper ad__button-wrapper--center hide-sm"><a class="button  button--open-websites">Find out more</a></p>
+          </div>
+          <div class="ad__badges">
+          <svg class="icon icon--boxed" title="css icon"><use xlink:href="#css3"></use></svg>
+          <svg class="icon icon--boxed" title="html icon"><use xlink:href="#html52"></use></svg>
+          </div>
+        </div>
       </div>
       <div class="col col--md__6">
-        <h3>Creative</h3>
-        <h4>Logos, Banners &amp; Email Marketing</h4>
-        <p>I can design and create both static and animated web banners, social media ads and imagery, html emails, logos and more.</p>
+        <div class="ad ad--shadow ad--hover-animation feature-item">
+          <div class="ad__image-wrapper">
+            <div class="ad__image ad__image--design"></div>
+              <div class="ad__image-content heading-group heading-group--white heading-group--md">
+                <h3 class="headline headline--white headline--uppercase headline--sm">Creative</h3>
+                <hr class="hr hr--white-grad">
+                <h4 class="headline headline--white headline--xsm headline--light">Logos, Banners &amp; Email Marketing</h4>
+                <p class="hide-md"><a class="button button--brand-1 button--open-creative">Find Out More <i class="ficon ficon-chevron-right" aria-hidden="true"></i></a></p>
+              </div>
+          </div>
+          <div class="ad__content hide-sm">
+            <p>I design and create both static and animated web banners, social media ads and imagery, html emails, logos and more.</p>
+              <hr class="hr hr--dark">
+        <p class="ad__button-wrapper ad__button-wrapper--center hide-sm"><a class="button  button--open-creative">Find out more</a></p>
+          </div>
+        </div>
       </div>
     </div>
     <!--/Categories-->
-  <!--Modal Websites-->
-  <section>
-    <div class="row row--gutters-lg">
-      <div class="col">
-        <h3>Websties</h3>
-        <h4>Methodology and Examples</h4>
-        <p>Due to me working for the same company for the last 19 years, and the fact that it was recently liquidated, the websites that I helped build have been taken offline and I need to upload my old template files.</p>
-        <p>I will endeavour to upload the frontend files as soon as I have stripped them of any dynamic server side code.</p>
-        <p>Templates will be added to my <a href="https://github.com/RikkOgden/a1travel"  target="_blank">a1travel github repository</a> over the course of the next few weeks.</p>
-        <h4>Methodology</h4>
-        <h5>How I like to build my sites</h5>
-          <dl>
-            <dt>Lightweight and Bespoke</dt>
-            <dd>I tend not to use boilerplates or frameworks, so my html is fully bespoke and as lightweight as possible<dd>
-            <dt>BEM Methodology</dt>
-            <dd>I have recently started to adopt the BEM methodology for my CSS and classes<dd>
-            <dt>Semantic HTML</dt>
-            <dd>I regularly validate my html with the wc3 validion tool<dd>
-          </dl>
-      </div>
-    </div><!--end row-->
-  </section>
+</div>
+</div>
 
-  <!--/Modal Websites-->
-  <!--Modal Creative-->
-  <section>
-    <div class="row row--gutters-lg">
-      <div class="col">
-      <h3>Creative Media</h3>
-      <h4>Logos, Banners and More</h4>
-      <div>
-      <h5>Cruisesoon Logo</h5>
-      <h6>Online cruise agency</h6>
-      <p>I was not given a design brief so I came up with something that I liked. I used the nintendo switch logo as inspiration, and I wanted something that would sit well on a coloured background. I selected blue to convey both the ocean, relaxation and a sense of calm.</p>
-      </div>
-      <div>
-      <h5>a1travel Logo</h5>
-      <h6>Online travel agency</h6>
-      <p>This one was the logo for the main brand of the company I worked for for 19 years.</p>
-      </div>
-      <div>
-      <h5>Web banners</h5>
-      <h6>various companies</h6>
-      <p>This one was the logo for the main brand of the company I worked for for 19 years.</p>
-      </div>
+<!--Modal Websites-->
+<section class="modal" id="modal-websites" role="dialog" aria-labelledby="WebsiteExamples" aria-describedby="WebsiteExamplesContent">
+  <a class="modal__overlay"></a>
+  <div class="modal__inner grid">
+  <div class="row row--gutters-lg">
+    <div class="col">
+      <h3>Websties</h3>
+      <h4>Methodology and Examples</h4>
+      <p>Due to me working for the same company for the last 19 years, and the fact that it was recently liquidated, the websites that I helped build have been taken offline and I need to upload my old template files.</p>
+      <p>I will endeavour to upload the frontend files as soon as I have stripped them of any dynamic server side code.</p>
+      <p>Templates will be added to my <a href="https://github.com/RikkOgden/a1travel"  target="_blank">a1travel github repository</a> over the course of the next few weeks.</p>
+      <h4>Methodology</h4>
+      <h5>How I like to build my sites</h5>
+        <dl>
+          <dt>Lightweight and Bespoke</dt>
+          <dd>I tend not to use boilerplates or frameworks, so my html is fully bespoke and as lightweight as possible<dd>
+          <dt>BEM Methodology</dt>
+          <dd>I have recently started to adopt the BEM methodology for my CSS and classes<dd>
+          <dt>Semantic HTML</dt>
+          <dd>I regularly validate my html with the wc3 validion tool<dd>
+        </dl>
+    </div>
+  </div><!--end row-->
+</div>
+</section><!--/Modal Websites-->
 
-      </div>
-    </div><!--end row-->
-  </section>
-  <!--/Modal Creative-->
+<!--Modal Creative-->
+<section class="modal" id="modal-creative" role="dialog" aria-labelledby="WebsiteExamples" aria-describedby="WebsiteExamplesContent">
+  <a class="modal__overlay"></a>
+  <div class="modal__inner grid">
+  <div class="row row--gutters-lg">
+    <div class="col">
+    <h3>Creative Media</h3>
+    <h4>Logos, Banners and More</h4>
+    <div>
+    <h5>Cruisesoon Logo</h5>
+    <h6>Online cruise agency</h6>
+    <p>I was not given a design brief so I came up with something that I liked. I used the nintendo switch logo as inspiration, and I wanted something that would sit well on a coloured background. I selected blue to convey both the ocean, relaxation and a sense of calm.</p>
+    </div>
+    <div>
+    <h5>a1travel Logo</h5>
+    <h6>Online travel agency</h6>
+    <p>This one was the logo for the main brand of the company I worked for for 19 years.</p>
+    </div>
+    <div>
+    <h5>Web banners</h5>
+    <h6>various companies</h6>
+    <p>This one was the logo for the main brand of the company I worked for for 19 years.</p>
+    </div>
+
+    </div>
+  </div><!--end row-->
+</div>
+</section><!--/Modal Creative-->
 
   </article>
 
 
 
 <article id="about-me">
-  <div class="grid">
+  <div class="page-section page-section--white">
+  <div class="grid grid--sm">
     <div class="row">
       <div class="col">
-        <h2>About me</h2>
-        <h3>What is my name? What is my quest and what is my favourite colour?</h3>
+        <h2 class="headline headline--lg headline--uppercase">About me</h2>
+        <hr class="hr hr--dark-grad">
+        <h3 class="headline headline--sm headline--light">What is my name? What is my quest and what is my favourite colour?</h3>
         <!--Intro-->
         My <b>name</b> is Rikk Ogden and I'm website and creative media designer / frontend developer. I'm also a husband and a father, a keen music lover and an noob video gamer.
         <p>Having a passion for design and technology, my <b>quest</b> is to continue to grow as a frontend developer, improve my programming and learn React.</p>
@@ -145,64 +189,70 @@
         <!--/Intro-->
       </div>
     </div><!--end row-->
-  <!--Modal Work History-->
-  <section>
-    <div class="row row--gutters-lg">
-      <div class="col col--md__6">
-        <h3>Work History</h3>
-        <h4>Where it began to where I am now</h4>
-        <h5>Chadwell Travel Ltd</h5>
-        <h6>February 1998 - October 2017</h6>
-        <p>I started as a holiday salesman back in 1998 for Chadwell Travel Ltd. After a few years, The company needed a web presence, and having a background in art and a keen interest in technology, I was given the opportunity to see if I could build something. I bought a book on HTML and after a couple of months I had created the company's very first website.</p>
-        <p>Over the course of the next decade I would continue to grow and evolve the website from it's beginnings as premier-leisure.com (a simple website with a framed third-party ecommerce solution) to a rebrand into a1travel.com. This would become the main brand and online-bookable sales platform for the company until the collapse of Monarch Airlines in October 2017 forced us into liquidation.</p>
-        <p>To my knowledge, we were one of the first UK online travel agency sites to go responsive.</p>
-        <p> By the end of the company's lifecycle I maintained responsibility for branding, front end design and development, email &amp; web marketing and managing a dev team in India with whom we had outsourced the backend and server side responsibilites.</p>
-      </div>
-      <div class="col col--md__6">
-        screengrab goes here
-      </div>
-    </div><!--end row-->
+</div>
+</div>
 
-    <div class="row row--gutters-lg">
-      <div class="col col--md__6">
-        <h4>Experience Gained</h4>
-        <h5>Chadwell Travel. 1998 - 2017</h5>
-        <p>As I was solely responsible for the website for the first half of its life, I would gain experience in a range of technology.</p>
-        <p>For the second half of the website's life we outsourced server-side development to Mumbai in India, swtching to .NET. I would gain experience in project managing this team, often writing psuedo code to assist in conveying logic requirements. I would also gain a base understanding of .NET principles and structure.</p>
-        <p>During this time I maintained full front end design and development responsibilities.</p>
-      </div>
-      <div class="col col--md__6">
-        <dl>
-          <dt>HTML, CSS, Adobe Fireworks, Adobe Flash and Jquery</dt>
-          <dd>These were my primary design and frontend development tools</dd>
-          <dt>Classic ASP</dt>
-          <dd>I built an intranet with a CMS, a CMS and dynamic pages for website offers</dd>
-          <dt>MS SQL Server / SQL</dt>
-          <dd>I built a database for both of the above, gaining a good understanding of DB concepts and SQL syntax.</dd>
-        </dl>
-      </div>
-    </div><!--end row-->
-    <div class="row row--gutters-lg">
-      <div class="col col--md__6">
-        <h5>Man Overboard</h5>
-        <h6>October 2017 - January 2018</h6>
-        <p>Finding myself without a job and in open waters I began to do some research and I realised that over the course of the last few years I had stagnated a little. I found myself in the position of feeling adrift in a sea of new technology.
-        </p>
-        <p>To that end I spent the time between October 20th 2017 and the end of December 2017 researching, learning and adapting to the modern workflow, learning NPM, Postcss,  Gulp, Git and Github</p>
-      </div>
+<!--Modal Work History-->
+<section class="modal" id="modal-workhistory" role="dialog" aria-labelledby="WebsiteExamples" aria-describedby="WebsiteExamplesContent">
+  <a class="modal__overlay"></a>
+  <div class="modal__inner grid">
+  <div class="row row--gutters-lg">
+    <div class="col col--md__6">
+      <h3>Work History</h3>
+      <h4>Where it began to where I am now</h4>
+      <h5>Chadwell Travel Ltd</h5>
+      <h6>February 1998 - October 2017</h6>
+      <p>I started as a holiday salesman back in 1998 for Chadwell Travel Ltd. After a few years, The company needed a web presence, and having a background in art and a keen interest in technology, I was given the opportunity to see if I could build something. I bought a book on HTML and after a couple of months I had created the company's very first website.</p>
+      <p>Over the course of the next decade I would continue to grow and evolve the website from it's beginnings as premier-leisure.com (a simple website with a framed third-party ecommerce solution) to a rebrand into a1travel.com. This would become the main brand and online-bookable sales platform for the company until the collapse of Monarch Airlines in October 2017 forced us into liquidation.</p>
+      <p>To my knowledge, we were one of the first UK online travel agency sites to go responsive.</p>
+      <p> By the end of the company's lifecycle I maintained responsibility for branding, front end design and development, email &amp; web marketing and managing a dev team in India with whom we had outsourced the backend and server side responsibilites.</p>
+    </div>
+    <div class="col col--md__6">
+      screengrab goes here
+    </div>
+  </div><!--end row-->
 
-      <div class="col col--md__6">
-        <h5>Moving Forward</h5>
-        <h6>February 2018 - Present</h6>
-        <p>My aim is to focus on specialising fully into frontend development and hope to find a position in a workplace that will embrace my hard-working, loyal and enthusiastic work ethic, whilst allowing me to grow and improve. I'm most excited about learning React and Node and keeping current with the ever evolving technology and practices.</p>
-        <p>
-        I'm currently spending my time researching and brushing up on all of my core skills, retraining myself in vanilla JS, and delving into the world of Node.js and React.
-        </p>
-      </div>
-    </div><!--end row-->
-  </section>
-  <!--/Modal Work History-->
-  </div>
+  <div class="row row--gutters-lg">
+    <div class="col col--md__6">
+      <h4>Experience Gained</h4>
+      <h5>Chadwell Travel. 1998 - 2017</h5>
+      <p>As I was solely responsible for the website for the first half of its life, I would gain experience in a range of technology.</p>
+      <p>For the second half of the website's life we outsourced server-side development to Mumbai in India, swtching to .NET. I would gain experience in project managing this team, often writing psuedo code to assist in conveying logic requirements. I would also gain a base understanding of .NET principles and structure.</p>
+      <p>During this time I maintained full front end design and development responsibilities.</p>
+    </div>
+    <div class="col col--md__6">
+      <dl>
+        <dt>HTML, CSS, Adobe Fireworks, Adobe Flash and Jquery</dt>
+        <dd>These were my primary design and frontend development tools</dd>
+        <dt>Classic ASP</dt>
+        <dd>I built an intranet with a CMS, a CMS and dynamic pages for website offers</dd>
+        <dt>MS SQL Server / SQL</dt>
+        <dd>I built a database for both of the above, gaining a good understanding of DB concepts and SQL syntax.</dd>
+      </dl>
+    </div>
+  </div><!--end row-->
+  <div class="row row--gutters-lg">
+    <div class="col col--md__6">
+      <h5>Man Overboard</h5>
+      <h6>October 2017 - January 2018</h6>
+      <p>Finding myself without a job and in open waters I began to do some research and I realised that over the course of the last few years I had stagnated a little. I found myself in the position of feeling adrift in a sea of new technology.
+      </p>
+      <p>To that end I spent the time between October 20th 2017 and the end of December 2017 researching, learning and adapting to the modern workflow, learning NPM, Postcss,  Gulp, Git and Github</p>
+    </div>
+
+    <div class="col col--md__6">
+      <h5>Moving Forward</h5>
+      <h6>February 2018 - Present</h6>
+      <p>My aim is to focus on specialising fully into frontend development and hope to find a position in a workplace that will embrace my hard-working, loyal and enthusiastic work ethic, whilst allowing me to grow and improve. I'm most excited about learning React and Node and keeping current with the ever evolving technology and practices.</p>
+      <p>
+      I'm currently spending my time researching and brushing up on all of my core skills, retraining myself in vanilla JS, and delving into the world of Node.js and React.
+      </p>
+    </div>
+  </div><!--end row-->
+</div>
+</section>
+<!--/Modal Work History-->
+
 </article>
 
 

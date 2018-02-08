@@ -5,12 +5,9 @@ color:#fff;
 position: relative;
 overflow: hidden;
 z-index: 0;
-
 @mixin atMedium {
   min-height:55vh;
 }
-
-
 
 @mixin atMedium {
 clip-path: polygon(

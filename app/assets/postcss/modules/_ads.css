@@ -1,0 +1,201 @@
+
+
+.ad{
+@mixin clearfix;
+position: relative;
+width: 100%;
+height: auto;
+margin: 0 0 2rem 0;
+display: block;
+
+
+
+&--no-mgn-b {margin: 0 0 0 0;}
+
+@mixin atMedium {
+margin: 0 0 0 0;
+
+&--mgn-v-offset {
+  position: relative;
+  margin-top: -10rem;
+
+}
+
+}
+
+&__button-wrapper {
+&--center {
+text-align: center;
+}
+}
+
+&--mgn-b-sm {
+margin:0 0 2rem 0;
+}
+
+&--mgn-b-md {
+margin:0 0 3rem 0;
+}
+
+&--shadow {
+box-shadow: 0px 0px 24px 3px color( var(--color2) alpha(.25));
+background:#fff;
+
+
+}
+
+&--hover-animation:hover {
+
+    & .ad__image {
+      left:50%;
+      transform-origin: 50% 0;
+      transform: translate3d(-50%, -10%, 0) scale3d(1.2, 1.2, 1.2);
+    transition:.4s ease-in;}
+}
+
+&__badges {
+  position: absolute;
+  top:-20px;
+  left:0;
+  width: 100%;
+  text-align: center;
+  z-index: 4;
+
+  & img {
+    width:44px;
+    height:auto;
+  }
+
+}
+
+&__image-wrapper {
+  position: relative;
+  min-height: 200px;
+  height: 240px;
+  overflow: hidden;
+  background-color: var(--color1);
+  border:1px solid #fff;
+
+@mixin atMedium {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 1.25vw)
+  );
+}
+
+}
+
+
+&__image {
+  position: absolute;
+  width:120%;
+  height: 120%;
+  background-size: cover;
+  background-position: center center;
+  transition:.2s ease-out;
+  left:50%;
+  transform-origin: 50% 0;
+  transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
+
+&--websites {
+    background-image: url('../../assets/images/devicessm.jpg');
+}
+&--devices {
+    background-image: url('../../assets/images/bkg-devicessm.jpg');
+}
+&--design {
+    background-image: url('../../assets/images/creativemediasm.jpg');
+
+    background-position: top;
+}
+&--logo {
+    background-image: url('../../assets/images/logo-cruisesoon-blue.png');
+}
+
+&--cellphone {
+background-image: url('../../assets/images/cellphone.jpg')
+}
+
+&--rikk {
+    background-image: url('../../assets/images/photo-rikk-ogden72.jpg');
+}
+&--rikk-lg {
+    /* background-image: url('../../assets/images/photo-hero-image-rikk72.jpg');
+    background-position:  center 30%; */
+}
+
+  &::after {
+    display:block;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: color(var(--color1) shade(95%) alpha(.5));
+    z-index: 1
+}
+}
+
+&__image-content {
+  position: absolute;
+  width: 100%;
+  top:50%;
+  left:0;
+  transform:translateY(-50%);
+  text-align: center;
+  z-index: 2;
+  padding: 0 15px;
+}
+
+&__content {
+  padding: .5rem 1.5rem .5rem 1.5rem;
+  font-weight: 300;
+}
+
+&__content-header {
+  margin: 0 0 0.5em 0;;
+  line-height: 1;
+  color: var(--color2);
+}
+
+/*Layout Modifiers*/
+
+&--left-to-right{
+
+& .ad__image-content {
+    padding: 1.5rem;
+}
+
+@mixin maxMedium {
+& .ad__content {
+    padding: 0.5rem 0 0 0;
+  }
+}
+
+  @mixin atMedium {
+  & .ad__image-wrapper {
+
+  width:50%;
+  height: 100%;
+  position: absolute;
+  clip-path: none;
+  box-shadow: 0px 0px 24px 3px color( var(--color2) alpha(.25));
+
+}
+
+& .ad__content {
+  float:right;
+  width:50%;
+padding: 0 1.5rem 0 1.5rem;
+text-align: left;
+
+
+  }
+
+}
+}
+
+}

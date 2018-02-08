@@ -354,6 +354,11 @@ template {
   box-sizing: border-box;
 }
 
+.noscroll {
+overflow: hidden;
+}
+
+
 body {
   font-family: 'Roboto', sans-serif;
   color:--color2;
@@ -377,3 +382,19 @@ img.native {
   max-width: auto;
   height: auto;
 }
+
+.text-offset {
+  text-indent:-99999px;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  height:0;
+
+}
+
+.offset-top-neg {
+  margin-top:-100px;
+  position: relative;
+}
+
+.pos-rel {position: relative;}

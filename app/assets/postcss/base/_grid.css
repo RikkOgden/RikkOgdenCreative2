@@ -74,7 +74,6 @@ margin:0 -50px;
 padding:0 25px;
 }
 .col {
-  position: relative;
   float:left;
   width:100%;
   @mixin clearfix;
