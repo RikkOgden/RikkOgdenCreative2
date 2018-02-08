@@ -1,6 +1,3 @@
-# Workflow Boilerplate v1.0.0
-Updated boilerplate for my most common Gulp automation tasks:
-- css concat, revisions and minify
-- svg symbol generation for svg icon system
-- watch task
-- build task
+# Rikk Ogden Creative v2.0.0
+Updated version of personal site with cleaner workflow:
+- testing SVG icon system
