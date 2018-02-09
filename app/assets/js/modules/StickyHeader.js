@@ -8,20 +8,23 @@ class StickyHeader {
     constructor (){
     this.itemTrigger = $(".hero-content");
     this.itemToStick = $(".site-header");
+    this.backToTopTrigger = $("#services");
+    this.backToTopContent = $(".back-to-top");
     this.pageSection = $(".page-section");
     this.navLinks    = $(".site-header a, .site-footer a");
     this.lazyimages  = $(".lazyload");
 
+
     this.addSmoothScroll();
     this.createWaypoints();
+    this.backToTop();
     this.createPageSectionWaypoints ();
     this.refreshWaypoints();
     }
 
     addSmoothScroll (){
-    this.navLinks.smoothScroll({
-    
-    });
+    this.navLinks.smoothScroll();
+    this.backToTopContent.smoothScroll();
   }
 
   refreshWaypoints (){
@@ -38,14 +41,41 @@ class StickyHeader {
           handler: function (direction) {
 
                 if (direction == "down") {
+
                 objThis.itemToStick.addClass("site-header--is-scrolling");
+
                 }else {
+
                 objThis.itemToStick.removeClass("site-header--is-scrolling");
+
                 }
           },
             offset: "10%"
     });
     }
+
+    backToTop (){
+      var objThis = this;
+          new Waypoint (
+          {
+          element: objThis.backToTopTrigger[0],
+          handler: function (direction) {
+
+                if (direction == "down") {
+                objThis.backToTopContent.addClass("back-to-top--visible");
+
+
+                }else {
+                objThis.backToTopContent.removeClass("back-to-top--visible");
+
+
+                }
+          },
+            offset: "10%"
+    });
+    }
+
+
 
     createPageSectionWaypoints (){
       var objCurrent = this;

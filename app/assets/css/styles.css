@@ -568,19 +568,25 @@ svg {vertical-align: middle;}
 .icon {
   width:32px; height:32px;
 
-
-
 }
 .icon--button {width:18px; height: 18px;}
 .icon--boxed {
     width:37px; height:37px;
     padding: 5px;
     background: #fff;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(28, 49, 68, 0.25);
+            box-shadow: 0 1px 2px 0 rgba(28, 49, 68, 0.25);
+    border-radius: 2px;
   }
 .icon--white{
     fill:#fff;
-    color:#fff;
   }
+.icon--brand-1{
+    fill: #1282A2;
+}
+.icon--brand-2{
+  fill: #1C3144;
+}
 button, .button {
 border:none;
 color:#fff;
@@ -656,8 +662,14 @@ z-index: 5;
     position: relative;
 }
 .site-header__logo-graphic {
-     width: 191.66667px;
-    height: 55.83333px;
+    width: 230px;
+    height: 67px;
+}
+@media (min-width: 769px) {
+.site-header__logo-graphic {
+width: 191.66667px;
+height: 55.83333px;
+}
 }
 .site-header__logo {
     background-color: #1C3144;
@@ -678,8 +690,8 @@ z-index: 5;
 @media (max-width: 769px) {
 .site-header__logo--transparent {
 background-color:transparent;
--webkit-transform: translate3d(-50%, 0, 0) scale3d(0.42, 0.42, 0.42);
-        transform: translate3d(-50%, 0, 0) scale3d(0.42, 0.42, 0.42);
+-webkit-transform: translate3d(-50%, 15px, 0) scale3d(0.42, 0.42, 0.42);
+        transform: translate3d(-50%, 15px, 0) scale3d(0.42, 0.42, 0.42);
 border:none;
 }
 }
@@ -699,8 +711,8 @@ background-color: rgba(28, 49, 68, 0.95);
 .site-header--is-scrolling .site-header__logo {
 background-color: rgba(28, 49, 68, 0);
 border-radius: 0 0 0 0;
--webkit-transform: scale3d(.7, .7, .7);
-        transform: scale3d(.7, .7, .7);
+-webkit-transform: scale3d(.69, .69, .69);
+        transform: scale3d(.69, .69, .69);
 
 }
 .site-header--is-scrolling .site-header__logo {
@@ -780,10 +792,10 @@ width:100%;
 -webkit-transform: translate3d(0, -100%, 0);
         transform: translate3d(0, -100%, 0);
 background-color: rgba(28, 49, 68, 0.9);
-z-index: 15;
 padding: 70px 18px 18px 18px;
 text-align: center;
-opacity: 0;
+opacity: 1;
+z-index: 1;
 
 }
 @media (max-width: 769px) {
@@ -1093,6 +1105,14 @@ width:100%;
 .page-section {
 padding:4rem 0 4rem 0;
 }
+}
+.page-section--pad-md {
+padding:24px 0 24px 0;
+padding:1.5rem 0 1.5rem 0;
+}
+.page-section--pad-sm {
+padding:16px 0 16px 0;
+padding:1rem 0 1rem 0;
 }
 .page-section--no-pad-b {
   padding-bottom: 0;
@@ -1446,6 +1466,93 @@ margin: 0 0 0 10px;
 }
 .site-footer {
 
+background-color: #1C3144;
+padding: 64px 0 64px 0;
+padding: 4rem 0 4rem 0;
+text-align: center;
+color: #fff;
+
+}
+.site-footer__text-link {
+  color:#fff;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  text-decoration: none;
+  padding: 15px 30px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 0 15px 0
+
+}
+.site-footer__text-link:hover {
+color: #1282A2;
+-webkit-transform-origin: 50%;
+        transform-origin: 50%;
+-webkit-transform:scale3d(1.2,1.2,1.2);
+        transform:scale3d(1.2,1.2,1.2);
+}
+.site-footer__text-link:hover .icon {
+fill:#1282A2;
+-webkit-transition: 0.15s;
+transition: 0.15s;
+}
+/*end text link */
+.site-footer__logo {
+  margin-top: -112px;
+  margin-top: -7rem;
+  background: #1C3144;
+  border-radius: 3px;
+  display: inline-block;
+  width:280px;
+  height: 97px;
+  padding: 15px 25px;
+
+
+
+}
+.back-to-top {
+
+position: fixed;
+text-align: center;
+bottom:0;
+right:10px;
+z-index: 10;
+opacity: 0.5;
+-webkit-transform: translate3d( 0, 60px, 0) scale3d(1.2,1.2,1.2);
+        transform: translate3d( 0, 60px, 0) scale3d(1.2,1.2,1.2);
+-webkit-transition: 0.6s;
+transition: 0.6s;
+background: #1282A2;
+border-radius: 50%;
+width:38px; height: 38px;
+-webkit-box-shadow: 0 1px 2px 0 rgba(28, 49, 68, 0.25);
+        box-shadow: 0 1px 2px 0 rgba(28, 49, 68, 0.25)
+
+}
+.back-to-top .icon {
+padding:6px;
+}
+.back-to-top--visible {
+    -webkit-transform: translate3d( 0, -30px, 0) scale3d(1.2,1.2,1.2)  ;
+            transform: translate3d( 0, -30px, 0) scale3d(1.2,1.2,1.2)  ;
+    opacity: 0.5;
+}
+.reveal-item {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition:.5s ease-out;
+  transition:.5s ease-out;
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  -webkit-transform: scale(.95);
+          transform: scale(.95);
+
+}
+.reveal-item--is-visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform:  scale(1);
+          transform:  scale(1);
 }
 @-webkit-keyframes scale {
     0% {

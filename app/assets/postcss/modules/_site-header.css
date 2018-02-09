@@ -20,8 +20,14 @@
   }
 
   &__logo-graphic {
-     width: calc(230px / 1.2);
-    height: calc(67px / 1.2);
+    width: calc(230px);
+    height: calc(67px);
+
+    @mixin atMedium {
+      width: calc(230px / 1.2);
+      height: calc(67px / 1.2);
+    }
+
   }
 
 
@@ -44,7 +50,7 @@
     &--transparent {
         @mixin maxMedium {
         background-color:transparent;
-        transform: translate3d(-50%, 0, 0) scale3d(0.42, 0.42, 0.42);
+        transform: translate3d(-50%, 15px, 0) scale3d(0.42, 0.42, 0.42);
         border:none;
       }
       }
@@ -64,7 +70,7 @@ background-color: color(var(--color2) alpha(0.95));
 .site-header__logo {
 background-color: color(var(--color2) alpha(0));
 border-radius: 0 0 0 0;
-transform: scale3d(.7, .7, .7);
+transform: scale3d(.69, .69, .69);
 
 }
 & .site-header__logo {

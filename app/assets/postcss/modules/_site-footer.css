@@ -1,3 +1,44 @@
 .site-footer {
 
+background-color: var(--color2);
+padding: 4rem 0 4rem 0;
+text-align: center;
+color: #fff;
+
+&__text-link {
+  color:#fff;
+  transition: 0.15s;
+  text-decoration: none;
+  padding: 15px 30px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 0 15px 0;
+
+  &:hover {
+    color: var(--color1);
+    transform-origin: 50%;
+    transform:scale3d(1.2,1.2,1.2);
+  & .icon {
+    fill:var(--color1);
+    transition: 0.15s;
+
+  }
+
+  }
+
+}/*end text link */
+
+&__logo {
+  margin-top: -7rem;
+  background: var(--color2);
+  border-radius: 3px;
+  display: inline-block;
+  width:280px;
+  height: 97px;
+  padding: 15px 25px;
+
+
+
+}
+
 }
