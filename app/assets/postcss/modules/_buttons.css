@@ -1,0 +1,49 @@
+button, .button {
+border:none;
+color:#fff;
+background-color:var(--color3);
+padding: 8px 15px 5px 15px;
+border-radius:4px;
+border-bottom: 4px solid color(var(--color3) shade(5%));
+box-shadow: 0 2px 2px 0 color(var(--color2)  alpha(.5));
+transition: 0.3s;
+font-weight:300;
+display: inline-block;
+text-decoration: none;
+cursor:pointer;
+text-align: center;
+
+&--lg {
+  font-size:1.5rem;
+}
+
+&--fw {
+  width:100%;
+}
+
+
+&:hover:not(:disabled) {
+  background-color: color(var(--color3) shade(30%));
+  border-bottom-color: color(var(--color3) shade(35%));
+  box-shadow: 0 6px 6px 0 color(var(--color2)  alpha(.35));
+color:#fff;
+}
+
+&--brand-1 {
+background-color:var(--color1);
+border-bottom: 4px solid color(var(--color1) shade(5%));
+
+&:hover:not(:disabled) {
+  background-color: color(var(--color1) shade(30%));
+  border-bottom-color: color(var(--color1) shade(35%));
+  box-shadow: 0 6px 6px 0 color(var(--color2)  alpha(.35));
+}
+
+}
+
+}
+
+
+
+button:disabled { opacity: 0.1}
+button.lg, .button.lg {font-size: 1.5rem;}

@@ -2,7 +2,7 @@
 
 .grid {
 margin: 0 auto;
-padding: 0 15px;
+padding: 0 16px;
 
   @mixin atMedium {
   max-width:1230px;
@@ -15,21 +15,21 @@ padding: 0 15px;
 }
 
 &--sm {
-    @mixin atMedium {
+    @mixin atSmall {
     max-width:830px;
   }
 }
 
 &--md {
-    @mixin atMedium {
+    @mixin atSmall {
     max-width:1054px;
   }
 }
 }
 
 .row {
-padding:0;
-margin:0;
+padding:0 0;
+margin:0 0;
 display: block;
 @mixin clearfix;
 

@@ -14,13 +14,6 @@ display: block;
 
 @mixin atMedium {
 margin: 0 0 0 0;
-
-&--mgn-v-offset {
-  position: relative;
-  margin-top: -10rem;
-
-}
-
 }
 
 &__button-wrapper {

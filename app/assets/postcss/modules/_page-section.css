@@ -4,6 +4,17 @@ padding:2rem 0 2rem 0;
 z-index: 1;
 width:100%;
 
+@mixin atMedium {
+padding:4rem 0 4rem 0;
+}
+
+&--no-pad-b {
+  padding-bottom: 0;
+}
+
+&--centered {
+text-align: center;
+}
 
 &--white {
 background-color:#fff;
@@ -21,7 +32,6 @@ background-color: var(--color2--light-3);
   @mixin atMedium {
   position: relative;
   margin-top: -9rem;
-
 }
 
 }
