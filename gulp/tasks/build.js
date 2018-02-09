@@ -61,9 +61,9 @@ gulp.task('copy-fav', function(){
 });
 
 gulp.task('copy-downloads', function(){
-  return gulp.src(['./app/downloads/**/*'])
-    .pipe(gulp.dest('./docs/downloads'))
-    .pipe(gulp.dest('./dist/public/downloads'));
+  return gulp.src(['./app/assets/downloads/**/*'])
+    .pipe(gulp.dest('./docs/assets/downloads'))
+    .pipe(gulp.dest('./dist/public/assets/downloads'));
 });
 
 
