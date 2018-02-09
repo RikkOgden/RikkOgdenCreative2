@@ -60,5 +60,11 @@ gulp.task('copy-fav', function(){
     .pipe(gulp.dest('./dist/public/fav'));
 });
 
+gulp.task('copy-downloads', function(){
+  return gulp.src(['./app/downloads/**/*'])
+    .pipe(gulp.dest('./docs/downloads'))
+    .pipe(gulp.dest('./dist/public/downloads'));
+});
 
-gulp.task('build', ['deleteBuildFolders', 'copy-fav', 'build-html-css', 'build-images', 'build-scripts']);
+
+gulp.task('build', ['deleteBuildFolders', 'copy-fav', 'copy-downloads', 'build-html-css', 'build-images', 'build-scripts']);
