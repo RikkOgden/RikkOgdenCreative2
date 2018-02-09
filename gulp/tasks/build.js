@@ -12,7 +12,9 @@ minify = composer(uglifyjs, console);
 
 //clean build folders
 gulp.task('deleteBuildFolders', function(){
-  return deleteFolder('./docs'), deleteFolder('./dist');
+  return
+  //deleteFolder('./docs'),
+  deleteFolder('./dist');
 })
 
 //minify, version and remap to latest version in the html files.
@@ -43,7 +45,6 @@ gulp.task('build-html-css', ['build-css', 'build-scripts'], function () {
 gulp.task('build-images', function(){
   return gulp.src(['./app/assets/images/**/*'])
   .pipe(imagemin({
-    verbose: true,
     progressive: true,
     interlaced: true,
     multipass: true
@@ -60,4 +61,4 @@ gulp.task('copy-fav', function(){
 });
 
 
-gulp.task('build', ['deleteBuildFolders', 'build-html-css', 'build-images', 'build-scripts', 'copy-fav']);
+gulp.task('build', ['deleteBuildFolders', 'copy-fav', 'build-html-css', 'build-images', 'build-scripts']);
