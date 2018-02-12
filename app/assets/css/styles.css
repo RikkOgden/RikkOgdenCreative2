@@ -587,6 +587,47 @@ svg {vertical-align: middle;}
 .icon--brand-2{
   fill: #1C3144;
 }
+a {
+  color: #1282A2
+
+}
+a:hover {
+color: rgb(113, 180, 199);
+}
+.text-link {
+  color: #1282A2
+
+}
+.text-link:hover {
+color: rgb(113, 180, 199);
+}
+.text-link--color2 {
+    color: #1C3144;
+}
+.text-link--color2:hover {
+color: rgb(119, 131, 143);
+}
+.text-link--color3 {
+    color: #401F3E;
+}
+.text-link--color3:hover {
+color: rgb(160, 143, 159);
+}
+.text-link--white {
+    color: #fff;
+}
+.text-link--white:hover {
+color:#fff;
+}
+.color1 {
+  color: #1282A2;
+}
+.color2 {
+  color: #1C3144;
+}
+.color3 {
+  color: #401F3E;
+}
 button, .button {
 border:none;
 color:#fff;

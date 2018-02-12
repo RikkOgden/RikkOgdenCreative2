@@ -1,0 +1,39 @@
+a {
+  color: var(--color1);
+
+  &:hover {
+    color: var(--color1--light-2);
+  }
+
+}
+
+.text-link {
+  color: var(--color1);
+  &:hover {
+    color: var(--color1--light-2);
+  }
+
+  &--color2 {
+    color: var(--color2);
+    &:hover {
+      color: var(--color2--light-2);
+    }
+  }
+
+  &--color3 {
+    color: var(--color3);
+    &:hover {
+      color: var(--color3--light-2);
+    }
+
+  }
+
+  &--white {
+    color: #fff;
+    &:hover {
+      color:#fff;
+    }
+
+  }
+
+}
