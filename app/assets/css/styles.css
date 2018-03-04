@@ -968,11 +968,10 @@ padding: 100px 0 20px 0;
 .hero__image {
 position: absolute;
 top:0;
+right:0;
+bottom:0;
+left:0;
 z-index: 0;
--webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
--webkit-transform: translate3d(-50%, 0, 0) scale3d(1.2, 1.2, 1.2);
-        transform: translate3d(-50%, 0, 0) scale3d(1.2, 1.2, 1.2);
 }
 .hero__image--scale-pan {
 -webkit-animation: scale-pan-blur 16s infinite;
@@ -1402,15 +1401,24 @@ padding-bottom: 200px;
   visibility: hidden;
   opacity: 0;
   z-index: 2;
+
 }
 @media (min-width: 769px) {
 .modal__inner {
-top:8%;
-right:8%;
-bottom:8%;
-left:8%;
+top:5%;
+right:5%;
+bottom:5%;
+left:5%;
 -webkit-box-shadow: 0px 0px 10px 3px rgba(14, 25, 34, 0.5);
         box-shadow: 0px 0px 10px 3px rgba(14, 25, 34, 0.5);
+}
+}
+@media (min-width: 1079px) {
+.modal__inner {
+top:5%;
+right:15%;
+bottom:5%;
+left:15%;
 }
 }
 .modal__scrollable {
@@ -1664,14 +1672,15 @@ padding:6px;
       -webkit-filter: blur(4px);
               filter: blur(4px);
 
+
     }
     5% {
       opacity: 0.7;
 
     }
     75% {
-        -webkit-transform: translate3d(-60%, -5%, 0) scale3d(1.3, 1.3, 1.3);
-                transform: translate3d(-60%, -5%, 0) scale3d(1.3, 1.3, 1.3);
+        -webkit-transform: translate3d(-6%, -5%, 0) scale3d(1.3, 1.3, 1.3);
+                transform: translate3d(-6%, -5%, 0) scale3d(1.3, 1.3, 1.3);
         -webkit-animation-timing-function: ease-in;
                 animation-timing-function: ease-in;
         opacity: 1;
@@ -1680,8 +1689,8 @@ padding:6px;
                 filter: blur(15px);
     }
     100% {
-        -webkit-transform: translate3d(-60%, -5%, 0) scale3d(1.6, 1.6, 1.6);
-                transform: translate3d(-60%, -5%, 0) scale3d(1.6, 1.6, 1.6);
+        -webkit-transform: translate3d(-6%, -5%, 0) scale3d(1.6, 1.6, 1.6);
+                transform: translate3d(-6%, -5%, 0) scale3d(1.6, 1.6, 1.6);
         opacity: 0;
         filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="24" /></filter></svg>#filter');
         -webkit-filter: blur(24px);
@@ -1695,14 +1704,15 @@ padding:6px;
       -webkit-filter: blur(4px);
               filter: blur(4px);
 
+
     }
     5% {
       opacity: 0.7;
 
     }
     75% {
-        -webkit-transform: translate3d(-60%, -5%, 0) scale3d(1.3, 1.3, 1.3);
-                transform: translate3d(-60%, -5%, 0) scale3d(1.3, 1.3, 1.3);
+        -webkit-transform: translate3d(-6%, -5%, 0) scale3d(1.3, 1.3, 1.3);
+                transform: translate3d(-6%, -5%, 0) scale3d(1.3, 1.3, 1.3);
         -webkit-animation-timing-function: ease-in;
                 animation-timing-function: ease-in;
         opacity: 1;
@@ -1711,8 +1721,8 @@ padding:6px;
                 filter: blur(15px);
     }
     100% {
-        -webkit-transform: translate3d(-60%, -5%, 0) scale3d(1.6, 1.6, 1.6);
-                transform: translate3d(-60%, -5%, 0) scale3d(1.6, 1.6, 1.6);
+        -webkit-transform: translate3d(-6%, -5%, 0) scale3d(1.6, 1.6, 1.6);
+                transform: translate3d(-6%, -5%, 0) scale3d(1.6, 1.6, 1.6);
         opacity: 0;
         filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="24" /></filter></svg>#filter');
         -webkit-filter: blur(24px);

@@ -11199,252 +11199,304 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_MobileMenu__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_StickyHeader__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_Modal__ = __webpack_require__(7);
 
 
+var _MobileMenu = __webpack_require__(3);
 
+var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-new __WEBPACK_IMPORTED_MODULE_0__modules_MobileMenu__["a" /* default */]('.site-header__menu-icon', '.site-nav');
-new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */]('.feature-item', '100%');
-new __WEBPACK_IMPORTED_MODULE_2__modules_StickyHeader__["a" /* default */]();
-new __WEBPACK_IMPORTED_MODULE_3__modules_Modal__["a" /* default */]('.button--open-work-history', '#modal-workhistory');
-new __WEBPACK_IMPORTED_MODULE_3__modules_Modal__["a" /* default */]('.button--open-websites', '#modal-websites');
-new __WEBPACK_IMPORTED_MODULE_3__modules_Modal__["a" /* default */]('.button--open-creative', '#modal-creative');
+var _RevealOnScroll = __webpack_require__(4);
 
+var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
+
+var _StickyHeader = __webpack_require__(5);
+
+var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
+
+var _Modal = __webpack_require__(7);
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+new _MobileMenu2.default('.site-header__menu-icon', '.site-nav');
+new _RevealOnScroll2.default('.feature-item', '100%');
+new _StickyHeader2.default();
+new _Modal2.default('.button--open-work-history', '#modal-workhistory');
+new _Modal2.default('.button--open-websites', '#modal-websites');
+new _Modal2.default('.button--open-creative', '#modal-creative');
 
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
-class MobileMenu {
 
-//1. create constructor function. This will be run immediately as soon as a new object is created with the 'MobileMenu' class.
-  constructor (trigger, content){
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenu = function () {
+
+  //1. create constructor function. This will be run immediately as soon as a new object is created with the 'MobileMenu' class.
+  function MobileMenu(trigger, content) {
+    _classCallCheck(this, MobileMenu);
+
     //this.menuIcon     = $('.site-header__menu-icon');
     //this.menuContent  = $('.site-header__menu-content');
-    this.menuIcon     = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(trigger);
-    this.menuContent  = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(content);
-    this.siteHeader   = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.site-header');
-    this.siteHeaderLogo = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".site-header__logo")
+    this.menuIcon = (0, _jquery2.default)(trigger);
+    this.menuContent = (0, _jquery2.default)(content);
+    this.siteHeader = (0, _jquery2.default)('.site-header');
+    this.siteHeaderLogo = (0, _jquery2.default)(".site-header__logo");
     this.events(); // we want the events handler being listned for by the browser as soon as teh page loads, or the object is created , so we make acall to it to include it in the constructor method.
   }
 
-//2. set the events handler METHOD
-// Bind :
-// normally - the 'this' keyword references the object that it belongs to.
-// however, when 'this' is used in an event handler - it gets set not to the object, but to the DOM element that the event got fired from
-//EG as soon as we click on the menuIcon property (.site-header__menu-icon) - 'this' is now associated with the icon, and not the object (MobileMenu).
-//'bind' will simply override and set whatever value it has in it's parentheses to be the 'this' keyword
-// as 'this' is already referencing the class/object BEFORE the click event fires, we can set it to (itself) to make sure further instances of 'this' referenced by any methods that the event handler calls, is still pointing to the object.
+  //2. set the events handler METHOD
+  // Bind :
+  // normally - the 'this' keyword references the object that it belongs to.
+  // however, when 'this' is used in an event handler - it gets set not to the object, but to the DOM element that the event got fired from
+  //EG as soon as we click on the menuIcon property (.site-header__menu-icon) - 'this' is now associated with the icon, and not the object (MobileMenu).
+  //'bind' will simply override and set whatever value it has in it's parentheses to be the 'this' keyword
+  // as 'this' is already referencing the class/object BEFORE the click event fires, we can set it to (itself) to make sure further instances of 'this' referenced by any methods that the event handler calls, is still pointing to the object.
 
-  events (){
-    this.menuIcon.click(this.toggleMenu.bind(this));
-  }
+  _createClass(MobileMenu, [{
+    key: 'events',
+    value: function events() {
+      this.menuIcon.click(this.toggleMenu.bind(this));
+    }
 
-  //3. The METHOD to fire from the events handler
-  toggleMenu(){
+    //3. The METHOD to fire from the events handler
+
+  }, {
+    key: 'toggleMenu',
+    value: function toggleMenu() {
       this.menuContent.toggleClass('site-nav--is-visible');
       this.siteHeader.toggleClass('site-header--is-expanded');
       this.menuIcon.toggleClass('site-header__menu-icon--close-x');
-      this.siteHeaderLogo.toggleClass ('site-header__logo--transparent');
-  }
+      this.siteHeaderLogo.toggleClass('site-header__logo--transparent');
+    }
+  }]);
 
-}
+  return MobileMenu;
+}();
 
-/* harmony default export */ __webpack_exports__["a"] = (MobileMenu);
-
+exports.default = MobileMenu;
 
 /***/ }),
 /* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_waypoints_lib_noframework_waypoints__);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-class RevealOnScroll {
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-constructor (els, offset){
+var _jquery = __webpack_require__(0);
 
-this.itemsToReveal = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(els);
-this.offsetPercent = offset;
-this.hideInitially();
-this.createWaypoints();
-}
+var _jquery2 = _interopRequireDefault(_jquery);
 
-hideInitially (){
-  this.itemsToReveal.addClass('reveal-item')
-}
+var _noframework = __webpack_require__(1);
 
-createWaypoints (){
-var isthis = this;
-this.itemsToReveal.each(function(){
-var currentItem = this;
-  console.log(this);
+var _noframework2 = _interopRequireDefault(_noframework);
 
-  new Waypoint (
-    {
-      element: currentItem,
-      handler: function(){
-      __WEBPACK_IMPORTED_MODULE_0_jquery___default()(currentItem).addClass("reveal-item--is-visible");
-    },
-    offset: isthis.offsetPercent
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealOnScroll = function () {
+  function RevealOnScroll(els, offset) {
+    _classCallCheck(this, RevealOnScroll);
+
+    this.itemsToReveal = (0, _jquery2.default)(els);
+    this.offsetPercent = offset;
+    this.hideInitially();
+    this.createWaypoints();
+  }
+
+  _createClass(RevealOnScroll, [{
+    key: 'hideInitially',
+    value: function hideInitially() {
+      this.itemsToReveal.addClass('reveal-item');
     }
-  );
+  }, {
+    key: 'createWaypoints',
+    value: function createWaypoints() {
+      var isthis = this;
+      this.itemsToReveal.each(function () {
+        var currentItem = this;
+        console.log(this);
 
+        new Waypoint({
+          element: currentItem,
+          handler: function handler() {
+            (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
+          },
+          offset: isthis.offsetPercent
+        });
+      });
+    }
+  }]);
 
-  });
-}
+  return RevealOnScroll;
+}();
 
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (RevealOnScroll);
-
+exports.default = RevealOnScroll;
 
 /***/ }),
 /* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery_smooth_scroll__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery_smooth_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery_smooth_scroll__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_waypoints_lib_noframework_waypoints__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_waypoints_lib_noframework_waypoints___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__node_modules_waypoints_lib_noframework_waypoints__);
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _jquery = __webpack_require__(0);
 
-class StickyHeader {
+var _jquery2 = _interopRequireDefault(_jquery);
 
-    constructor (){
-    this.itemTrigger = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".hero-content");
-    this.itemToStick = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".site-header");
-    this.backToTopTrigger = __WEBPACK_IMPORTED_MODULE_0_jquery___default()("#services");
-    this.backToTopContent = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".back-to-top");
-    this.pageSection = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".page-section");
-    this.navLinks    = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".site-header a, .site-footer a");
-    this.lazyimages  = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".lazyload");
+var _jquerySmoothScroll = __webpack_require__(6);
 
+var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var StickyHeader = function () {
+  function StickyHeader() {
+    _classCallCheck(this, StickyHeader);
+
+    this.itemTrigger = (0, _jquery2.default)(".hero-content");
+    this.itemToStick = (0, _jquery2.default)(".site-header");
+    this.backToTopTrigger = (0, _jquery2.default)("#services");
+    this.backToTopContent = (0, _jquery2.default)(".back-to-top");
+    this.pageSection = (0, _jquery2.default)(".page-section");
+    this.navLinks = (0, _jquery2.default)(".site-header a, .site-footer a");
+    this.lazyimages = (0, _jquery2.default)(".lazyload");
 
     this.addSmoothScroll();
     this.createWaypoints();
     this.backToTop();
-    this.createPageSectionWaypoints ();
+    this.createPageSectionWaypoints();
     this.refreshWaypoints();
-    }
-
-    addSmoothScroll (){
-    this.navLinks.smoothScroll();
-    this.backToTopContent.smoothScroll();
   }
 
-  refreshWaypoints (){
-      this.lazyimages.on('load', function(){
-      Waypoint.refreshAll();
+  _createClass(StickyHeader, [{
+    key: 'addSmoothScroll',
+    value: function addSmoothScroll() {
+      this.navLinks.smoothScroll();
+      this.backToTopContent.smoothScroll();
+    }
+  }, {
+    key: 'refreshWaypoints',
+    value: function refreshWaypoints() {
+      this.lazyimages.on('load', function () {
+        Waypoint.refreshAll();
       });
     }
-
-    createWaypoints (){
+  }, {
+    key: 'createWaypoints',
+    value: function createWaypoints() {
       var objThis = this;
-          new Waypoint (
-          {
-          element: objThis.itemTrigger[0],
-          handler: function (direction) {
+      new Waypoint({
+        element: objThis.itemTrigger[0],
+        handler: function handler(direction) {
 
-                if (direction == "down") {
+          if (direction == "down") {
 
-                objThis.itemToStick.addClass("site-header--is-scrolling");
+            objThis.itemToStick.addClass("site-header--is-scrolling");
+          } else {
 
-                }else {
-
-                objThis.itemToStick.removeClass("site-header--is-scrolling");
-
-                }
-          },
-            offset: "10%"
-    });
+            objThis.itemToStick.removeClass("site-header--is-scrolling");
+          }
+        },
+        offset: "10%"
+      });
     }
-
-    backToTop (){
+  }, {
+    key: 'backToTop',
+    value: function backToTop() {
       var objThis = this;
-          new Waypoint (
-          {
-          element: objThis.backToTopTrigger[0],
-          handler: function (direction) {
+      new Waypoint({
+        element: objThis.backToTopTrigger[0],
+        handler: function handler(direction) {
 
-                if (direction == "down") {
-                objThis.backToTopContent.addClass("back-to-top--visible");
-
-
-                }else {
-                objThis.backToTopContent.removeClass("back-to-top--visible");
-
-
-                }
-          },
-            offset: "10%"
-    });
+          if (direction == "down") {
+            objThis.backToTopContent.addClass("back-to-top--visible");
+          } else {
+            objThis.backToTopContent.removeClass("back-to-top--visible");
+          }
+        },
+        offset: "10%"
+      });
     }
-
-
-
-    createPageSectionWaypoints (){
+  }, {
+    key: 'createPageSectionWaypoints',
+    value: function createPageSectionWaypoints() {
       var objCurrent = this;
-      this.pageSection.each(function(){
+      this.pageSection.each(function () {
         var currentSection = this;
 
-        new Waypoint ({
+        new Waypoint({
           element: currentSection,
-          handler: function(direction){
+          handler: function handler(direction) {
             var matchLink = currentSection.getAttribute("data-link");
 
             if (direction == "down") {
               objCurrent.navLinks.removeClass("is-current-link");
-              __WEBPACK_IMPORTED_MODULE_0_jquery___default()(matchLink).addClass("is-current-link");
+              (0, _jquery2.default)(matchLink).addClass("is-current-link");
             }
           },
           offset: "18%"
         });
 
-        new Waypoint ({
+        new Waypoint({
           element: currentSection,
-          handler: function(direction){
+          handler: function handler(direction) {
             var matchLink = currentSection.getAttribute("data-link");
 
             if (direction == "up") {
               objCurrent.navLinks.removeClass("is-current-link");
-              __WEBPACK_IMPORTED_MODULE_0_jquery___default()(matchLink).addClass("is-current-link");
+              (0, _jquery2.default)(matchLink).addClass("is-current-link");
             }
           },
           offset: "-40%"
         });
-
       });
+    }
+  }]);
 
+  return StickyHeader;
+}();
 
-}
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (StickyHeader);
-
+exports.default = StickyHeader;
 
 /***/ }),
 /* 6 */
@@ -11815,54 +11867,68 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 /* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
 
-class Modal {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-  constructor(trigger, target) {
-    this.open =         __WEBPACK_IMPORTED_MODULE_0_jquery___default()(trigger);
-    this.close =        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(target +" .button--close-modal");
-    this.overlayclose = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".modal__overlay");
-    this.modal =        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(target);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+  function Modal(trigger, target) {
+    _classCallCheck(this, Modal);
+
+    this.open = (0, _jquery2.default)(trigger);
+    this.close = (0, _jquery2.default)(target + " .button--close-modal");
+    this.overlayclose = (0, _jquery2.default)(".modal__overlay");
+    this.modal = (0, _jquery2.default)(target);
     this.events();
-    
-
   }
 
+  _createClass(Modal, [{
+    key: "events",
+    value: function events() {
+      this.open.click(this.openModal.bind(this));
+      console.log(this.modal);
+      this.close.click(this.closeModal.bind(this));
+      this.overlayclose.click(this.closeModal.bind(this));
+    }
+  }, {
+    key: "openModal",
+    value: function openModal() {
 
+      (0, _jquery2.default)("html").addClass("noscroll");
+      this.modal.addClass("modal--is-visible");
+      this.modal.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function (e) {
+        (0, _jquery2.default)(' .button--close-modal').focus();
+      });
+      return false;
+    }
+  }, {
+    key: "closeModal",
+    value: function closeModal() {
+      (0, _jquery2.default)("html").removeClass("noscroll");
+      this.modal.removeClass("modal--is-visible");
+      return false;
+    }
+  }]);
 
-  events() {
-    this.open.click(this.openModal.bind(this));
-    console.log(this.modal);
-    this.close.click(this.closeModal.bind(this));
-    this.overlayclose.click(this.closeModal.bind(this));
-  }
+  return Modal;
+}();
 
-  openModal() {
-
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()("html").addClass("noscroll");
-    this.modal.addClass("modal--is-visible");
-    this.modal.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(' .button--close-modal').focus();
-    });
-    return false;
-  }
-
-  closeModal() {
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()("html").removeClass("noscroll");
-    this.modal.removeClass("modal--is-visible");
-    return false;
-  }
-
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (Modal);
-
+exports.default = Modal;
 
 /***/ })
 /******/ ]);
